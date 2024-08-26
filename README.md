@@ -1,0 +1,2 @@
+# Facial-Emotion-Recognition-using-Convolutional-Neural-Networks-CNNs-on-the-FER-2013-Dataset
+This project uses CNNs to classify facial emotions from the FER-2013 dataset, consisting of 35,887 grayscale images across 7 emotions (Angry, Disgust, Fear, Happy, Sad, Surprise, Neutral). It demonstrates applying CNN architecture to real-world facial expression recognition tasks, showcasing deep learning expertise
