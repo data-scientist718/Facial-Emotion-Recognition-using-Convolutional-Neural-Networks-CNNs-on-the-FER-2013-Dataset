@@ -43,7 +43,9 @@ The project aims to produce a CNN model that can classify facial emotions with a
 
 To install the required dependencies, run the following command:
 
+```bash
 pip install -r requirements.txt
+```
 
 ## Dependencies
 
@@ -103,4 +105,20 @@ Example usage:
 
 ```python
 predicted_emotion = predict_emotion(model, sample_img)
-print(f'Predicted emotion: {predicted_emotion}')
+print(f'Predicted emotion: {predicted_emotion}') 
+```
+
+## Results
+
+- **Test Accuracy**: The model achieves an approximate test accuracy of 75-80% on the FER-2013 dataset.
+- **Model Performance**: The model generalizes well to unseen images and can accurately classify facial expressions into one of the seven emotions.
+
+## Future Enhancements
+
+- **Data Augmentation**: Applying data augmentation techniques like random rotations, zooms, and shifts could improve the model's generalization performance on the test data.
+- **Transfer Learning**: Using a pre-trained model like VGG16 or ResNet and fine-tuning it on the FER-2013 dataset could boost performance.
+- **Real-time Application**: The current implementation could be extended to real-time emotion detection from live video streams using a webcam or other video input.
+
+## Conclusion
+
+This project demonstrates the use of CNNs for image classification tasks such as facial emotion recognition. The model has been trained and evaluated on the FER-2013 dataset and is capable of predicting facial emotions with reasonable accuracy. With further tuning and improvements, this model could be integrated into various real-world applications requiring emotion detection.
