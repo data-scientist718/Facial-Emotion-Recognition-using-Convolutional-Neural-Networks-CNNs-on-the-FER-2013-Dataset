@@ -43,44 +43,64 @@ The project aims to produce a CNN model that can classify facial emotions with a
 
 To install the required dependencies, run the following command:
 
-```bash
 pip install -r requirements.txt
 
-Dependencies
+## Dependencies
+
 To run this project, ensure you have the following dependencies installed:
 
-TensorFlow >= 2.4.0
-Keras >= 2.4.3
-NumPy >= 1.19.5
-Pandas >= 1.1.5
-Matplotlib >= 3.3.4
-Seaborn >= 0.11.1
-Scikit-learn >= 0.24.0
-Key Features
-1. Data Preprocessing
-Load the FER-2013 dataset and preprocess the images for CNN input.
-Normalize the images and convert the emotion labels into one-hot encoded format.
-2. Model Building
-A Convolutional Neural Network (CNN) was designed with the following components:
-Conv2D Layers: Extract features from the input images.
-MaxPooling2D Layers: Reduce the dimensionality of the features.
-Dense Layers: Fully connected layers for final classification.
-Dropout Layer: Included to prevent overfitting.
-Softmax Activation: Used for multiclass classification.
-3. Model Training
-The model is trained on the FER-2013 dataset using categorical cross-entropy as the loss function and Adam optimizer.
-The training process is tracked for accuracy and loss metrics over 50 epochs.
-4. Model Evaluation
-The model's performance is evaluated on the test set, with accuracy and loss scores calculated.
-A confusion matrix is generated to visualize the model's performance across all emotion classes.
-Training and validation accuracy and loss are plotted to monitor model performance over time.
-5. Prediction Function
-The predict_emotion function is provided, which takes a new image as input and returns the predicted emotion label.
-This function can be used for real-time predictions on unseen images.
-Usage Instructions
-1. Training the Model
-To train the CNN model from scratch, use the Jupyter notebook Facial_Emotion_Recognition_CNN.ipynb. After training, the model will be saved as emotion_recognition_model.h5.
+- **TensorFlow** >= 2.4.0
+- **Keras** >= 2.4.3
+- **NumPy** >= 1.19.5
+- **Pandas** >= 1.1.5
+- **Matplotlib** >= 3.3.4
+- **Seaborn** >= 0.11.1
+- **Scikit-learn** >= 0.24.0
 
-2. Running Predictions
-To run predictions, use the predict_emotion function within the notebook. This function takes an image as input and returns the predicted emotion.
+## Key Features
 
+### 1. Data Preprocessing
+
+- Load the FER-2013 dataset and preprocess the images for CNN input.
+- Normalize the images and convert the emotion labels into one-hot encoded format.
+
+### 2. Model Building
+
+- A Convolutional Neural Network (CNN) was designed with the following components:
+  - **Conv2D Layers**: Extract features from the input images.
+  - **MaxPooling2D Layers**: Reduce the dimensionality of the features.
+  - **Dense Layers**: Fully connected layers for final classification.
+  - **Dropout Layer**: Included to prevent overfitting.
+  - **Softmax Activation**: Used for multiclass classification.
+
+### 3. Model Training
+
+- The model is trained on the FER-2013 dataset using categorical cross-entropy as the loss function and Adam optimizer.
+- The training process is tracked for accuracy and loss metrics over 50 epochs.
+
+### 4. Model Evaluation
+
+- The model's performance is evaluated on the test set, with accuracy and loss scores calculated.
+- A confusion matrix is generated to visualize the model's performance across all emotion classes.
+- Training and validation accuracy and loss are plotted to monitor model performance over time.
+
+### 5. Prediction Function
+
+- The `predict_emotion` function is provided, which takes a new image as input and returns the predicted emotion label.
+- This function can be used for real-time predictions on unseen images.
+
+## Usage Instructions
+
+### 1. Training the Model
+
+To train the CNN model from scratch, use the Jupyter notebook `Facial_Emotion_Recognition_CNN.ipynb`. After training, the model will be saved as `emotion_recognition_model.h5`.
+
+### 2. Running Predictions
+
+To run predictions, use the `predict_emotion` function within the notebook. This function takes an image as input and returns the predicted emotion.
+
+Example usage:
+
+```python
+predicted_emotion = predict_emotion(model, sample_img)
+print(f'Predicted emotion: {predicted_emotion}')
